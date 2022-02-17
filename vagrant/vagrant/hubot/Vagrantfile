@@ -1,0 +1,17 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  config.vm.define "dev" do |dev| 
+    config.vm.box = "ubuntu/trusty64"
+    config.vm.hostname = "hubot-dev"
+  end
+
+  config.vm.define "prod" do |prod| 
+    config.vm.box = "ubuntu/trusty64"
+    config.vm.hostname = "hubot-prod"
+  end
+  config.vm.provision "shell", path: "provision.sh"
+
+end
