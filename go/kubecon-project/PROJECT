@@ -1,0 +1,16 @@
+domain: sudotrix.com
+layout:
+- go.kubebuilder.io/v3
+projectName: kubecon-project
+repo: mykubecon
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: sudotrix.com
+  group: webapp
+  kind: GuestBook
+  path: mykubecon/api/v1
+  version: v1
+version: "3"
